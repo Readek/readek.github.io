@@ -1,0 +1,50 @@
+body, html {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    scrollbar-width: thin; /* Firefox */
+    scrollbar-color: lightgray gray; /* Firefox */
+}
+/* all of this is chromium only */
+body::-webkit-scrollbar {
+    width: 5px; /* this doesnt seem to matter at all? */
+    height: 5px;
+}
+body::-webkit-scrollbar-track {
+    background: gray;
+  }
+body::-webkit-scrollbar-thumb {
+    background-color: lightgray;
+}
+
+@font-face {
+    font-family: "Deansgate";
+    src: url('Resources/Fonts/DeansgateCondensed-Bold.ttf');
+}
+
+#intro {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:  #2dbd58;
+}
+
+.introText {
+    font-family: "Deansgate";
+    color: white;
+    text-transform: uppercase;
+    background-color: black;
+    transform: rotate(-3deg);
+}
+#introTitle {
+    font-size: 80px;
+    padding: 0 30px 0 30px;
+    filter: drop-shadow(10px 10px 0px rgba(0, 0, 0, .5));
+}
+#introSubT {
+    font-size: 24px;
+    padding: 3px 15px 3px 15px;
+    margin-top: 20px;
+}
