@@ -164,8 +164,8 @@ a {
     flex-direction: column;
     align-items: center;
     border-top: 1px solid grey;
-    margin-top: 5px;
-    padding-top: 5px;
+    margin-top: 10px;
+    padding-top: 10px;
 }
 
 .stDemoTitle {
@@ -200,7 +200,7 @@ a {
     margin: 0px 3px 0px 3px;
 }
 .buttonsBot:hover {
-    filter: brightness(1.1);
+    filter: brightness(1.2);
     cursor: pointer;
 }
 .buttonsBot:active {
@@ -216,7 +216,7 @@ a {
     transform: translate(1px, 1px);
 }
 #githubButton {
-    background-color: #272727;
+    background-color: #292929;
 }
 #githubIcon {
     height: 23px;

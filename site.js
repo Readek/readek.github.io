@@ -19,7 +19,3 @@ const imageObserver = new IntersectionObserver( (entries, observer) => {
 vids.forEach( (vid) => {
     imageObserver.observe(vid);
 });
-
-
-
-  
