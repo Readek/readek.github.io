@@ -4,10 +4,11 @@ body, html {
     height: 100%;
     scrollbar-width: thin; /* Firefox */
     scrollbar-color: lightgray gray; /* Firefox */
+    scroll-behavior: smooth;
 }
 /* all of this is chromium only */
 body::-webkit-scrollbar {
-    width: 5px; /* this doesnt seem to matter at all? */
+    width: 5px;
     height: 5px;
 }
 body::-webkit-scrollbar-track {
@@ -20,6 +21,19 @@ body::-webkit-scrollbar-thumb {
 @font-face {
     font-family: "Deansgate";
     src: url('Resources/Fonts/DeansgateCondensed-Bold.ttf');
+}
+@font-face {
+    font-family: "Roboto";
+    src: url('Resources/Fonts/Roboto-Regular.ttf');
+}
+@font-face {
+    font-family: "RobotoL";
+    src: url('Resources/Fonts/Roboto-Light.ttf');
+}
+
+a {
+    color: lightskyblue;
+    text-decoration: none;
 }
 
 #intro {
@@ -35,6 +49,7 @@ body::-webkit-scrollbar-thumb {
     font-family: "Deansgate";
     color: white;
     text-transform: uppercase;
+    text-align: center;
     background-color: black;
     transform: rotate(-3deg);
 }
@@ -42,9 +57,200 @@ body::-webkit-scrollbar-thumb {
     font-size: 80px;
     padding: 0 30px 0 30px;
     filter: drop-shadow(10px 10px 0px rgba(0, 0, 0, .5));
+    animation: .6s .1s both introFade;
+}
+@keyframes introFade {
+    0% {
+        opacity: 0;
+        transform: translateY(-70px) rotate(-3deg);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px) rotate(-3deg);
+    }
 }
 #introSubT {
     font-size: 24px;
     padding: 3px 15px 3px 15px;
     margin-top: 20px;
+    animation: .7s .5s both subIntroFade;
+}
+@keyframes subIntroFade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+#introDesc {
+    position: absolute;
+    top: 90%;
+    font-family: "Roboto";
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    filter: drop-shadow(0 0 3px black);
+    cursor: pointer;
+    transition: filter 100ms;
+    animation: .6s 1.3s both descIntroFade;
+}
+#introDesc:hover {
+    filter: drop-shadow(0 0 3px black) brightness(1.5);
+}
+#downIcon {
+    margin-top: 5px;
+    height: 30px;
+    width: 30px;
+    fill: white;
+}
+@keyframes descIntroFade {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+
+.project {
+    padding: 30px 0 30px 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border-top: 1px solid grey;
+    box-shadow: inset -1px 0px 4px #adadad40, 0 0 48px rgb(36, 36, 36);
+}
+
+.projectTitle {
+    font-family: "Deansgate";
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: black;
+    transform: rotate(-3deg);
+    font-size: 34px;
+    padding: 0 15px 0 15px;
+    filter: drop-shadow(5px 5px 0px rgba(20, 20, 20, 0.5));
+    margin: 10px 0 15px 0;
+}
+
+.projectDesc {
+    font-family: "Roboto";
+    font-size: 18px;
+    color: white;
+    text-shadow: 1px 1px 0px black;
+    text-align: center;
+    max-width: 1000px;
+    padding: 10px 0 10px 0;
+}
+
+
+#stBox {
+    background-color: #444444;
+}
+.stVid {
+    filter: drop-shadow(0px 0px 10px black);
+    padding: 10px 0 10px 0;
+}
+
+.stDemo {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border-top: 1px solid grey;
+    margin-top: 5px;
+    padding-top: 5px;
+}
+
+.stDemoTitle {
+    color: white;
+    font-family: "RobotoL";
+    font-size: 22px;
+    letter-spacing: 3px;
+    border-bottom: 1px white solid;
+    margin-bottom: 5px;
+}
+
+
+#recolorerBox {
+    background-color: #514188;
+}
+
+
+#aboutBox {
+    background-color: #424429;
+}
+#socialIcons {
+    display: flex;
+}
+.buttonsBot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    width: 35px;
+    border-radius: 20px;
+    transition: filter 100ms;
+    margin: 0px 3px 0px 3px;
+}
+.buttonsBot:hover {
+    filter: brightness(1.1);
+    cursor: pointer;
+}
+.buttonsBot:active {
+    filter: brightness(.9);
+}
+#twitterButton {
+    background-color: #6479be;
+}
+#twitterIcon {
+    height: 21px;
+    width: 21px;
+    fill: white;
+    transform: translate(1px, 1px);
+}
+#githubButton {
+    background-color: #272727;
+}
+#githubIcon {
+    height: 23px;
+    width: 23px;
+    fill: white;
+    transform: translate(0px, 1px);
+}
+
+@media (max-width: 650px) {
+
+    #introTitle {
+        font-size: 40px;
+        padding: 0 20px 0 20px;
+        filter: drop-shadow(7px 7px 0px rgba(0, 0, 0, .5));
+    }
+    #introSubT {
+        font-size: 20px;
+    }
+    #introDesc {
+        font-size: 16px;
+        max-width: 80%;
+    }
+
+    .projectTitle {
+        font-size: 30px;
+    }
+    .projectDesc {
+        max-width: 90%;
+        text-align: justify;
+        text-align-last: center;
+    }
+
+    .vid {
+        max-width: 100%;
+    }
+
 }
