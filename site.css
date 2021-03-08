@@ -62,7 +62,7 @@ a {
 @keyframes introFade {
     0% {
         opacity: 0;
-        transform: translateY(-70px) rotate(-3deg);
+        transform: translateY(-50px) rotate(-3deg);
     }
     100% {
         opacity: 1;
