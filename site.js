@@ -4,7 +4,6 @@ document.getElementById("introDesc").addEventListener("click", () => {
     stBox.scrollIntoView();
 });
 
-const guiVid = document.getElementById("guiVid");
 //plays and pauses the videos to help with performance, i think
 const vids = document.querySelectorAll(".vid");
 const imageObserver = new IntersectionObserver( (entries, observer) => {
