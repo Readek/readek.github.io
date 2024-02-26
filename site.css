@@ -37,13 +37,20 @@ a {
 }
 
 
+.bgSideDarkness {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right, #00000030, #00000000, #00000000, #00000000, #00000030);
+}
+
 #intro {
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(to right, #259e4a, #2dbd58, #2dbd58, #2dbd58, #259e4a);
+    background-color: #2dbd58;
 }
 
 .introText {
@@ -146,6 +153,7 @@ a {
 
 
 .project {
+    position: relative;
     padding: 30px 0 30px 0;
     display: flex;
     justify-content: center;
@@ -153,6 +161,13 @@ a {
     align-items: center;
     border-top: 1px solid grey;
     box-shadow: inset -1px 0px 4px #adadad40, 0 0 48px rgb(36, 36, 36);
+}
+.projectSt {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    transition: transform .25s, opacity .25s;
 }
 
 .projectTitle {
@@ -180,7 +195,7 @@ a {
 
 
 #stBox {
-    background-image: linear-gradient(to right, #383838, #444444, #444444, #444444, #383838);
+    background-color: #444444;
 }
 #stPreview {
     width: 800px;
@@ -193,14 +208,53 @@ a {
     padding: 10px 0 10px 0;
 }
 
-#stRoABox {
-    background-image: linear-gradient(to right, #2e2e36, #383841, #383841, #383841, #2e2e36);
+#stRepos {
+    background-color: #383841;
+    transition: background-color .5s;
 }
-#stMeleeBox {
-    background-image: linear-gradient(to right, #383030, #413838, #413838, #413838, #383030);
+
+#stSelector {
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
-#stRRBox {
-    background-image: linear-gradient(to right, #323a36, #38413d, #38413d, #38413d, #323a36);
+.stButt {
+    background: none;
+    border: 2px solid gray;
+    border-radius: 100%;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    transition: filter .15s, transform .2s;
+    cursor: pointer;
+    outline: none;
+}
+.stButt:hover, .stButt:focus-visible {
+    filter: brightness(1.5);
+}
+#stPrev {
+    transform: rotate(90deg);
+}
+#stPrev:hover, #stPrev:focus-visible {
+    transform: rotate(90deg) translateY(5px);
+}
+#stNext {
+    transform: rotate(-90deg);
+}
+#stNext:hover, #stNext:focus-visible {
+    transform: rotate(-90deg) translateY(5px);
+}
+.stButtIcon {
+    transform: translateY(1px);
+    fill: grey;
+}
+
+#stMeleeBox, #stRRBox {
+    display: none;
+    opacity: 0;
 }
 
 .stDemo {
@@ -257,10 +311,18 @@ a {
 .buttonsBot:active {
     filter: brightness(.9);
 }
-#twitterButton {
+#mastoButton {
     background-color: #6479be;
 }
-#twitterIcon {
+#mastoIcon {
+    height: 21px;
+    width: 21px;
+    fill: white;
+}
+#kofiButton {
+    background-color: #64b3be;
+}
+#kofiIcon {
     height: 21px;
     width: 21px;
     fill: white;
@@ -278,8 +340,8 @@ a {
 
 @media (max-width: 650px) {
 
-    #intro {
-        background-image: linear-gradient(to right, #2dbd58, #2dbd58);
+    .bgSideDarkness {
+        display: none;
     }
 
     #introTitle {
@@ -310,19 +372,6 @@ a {
 
     .vid, #stPreview {
         max-width: 100%;
-    }
-
-    #stBox {
-        background-image: linear-gradient(to right, #444444, #444444);
-    }
-    #stRoABox {
-        background-image: linear-gradient(to right, #383841, #383841);
-    }
-    #stMeleeBox {
-        background-image: linear-gradient(to right, #413838, #413838);
-    }
-    #stRRBox {
-        background-image: linear-gradient(to right, #38413d, #38413d);
     }
 
     #customColorsBox {
