@@ -285,6 +285,98 @@
 
     </div>
 
+    <div id="pokeSTBox" class="project">
+
+        <div class="bgSideDarkness"></div>
+
+        <div class="projectTitle">
+            Poke Stream Tool
+        </div>
+
+        <img src="Resources/Images/PokeST GUI.png" alt="Poke ST Preview Image" id="pokeSTPreview">
+
+        <div class="projectDesc">
+            As a separate entity from the projects above, this is a work in progress project
+            that aims to be a solution for anyone wanting to stream any Pokemon game! With a GUI
+            made in <strong>Electron</strong>, users can have plenty of control over
+            the data sent to the overlays.
+            <br><br>
+            This tool is able to read the game's memory in real time and decrypt this data
+            to auto update all information in real time so users don't even have to bother
+            managing overlay info!
+            <br><br>
+            You can check the current state of the repo
+            <a href="https://github.com/Readek/Pokemon-Stream-Tool">here</a>.
+            <br>
+        </div>
+
+        <div id="pokeSTSelector">
+            <button id="pokePrev" class="pokeButt">
+                <svg class="pokeButtIcon" viewBox="0 0 25.93 25.93">
+                    <path d="M25.397,4.554h-2.042l-9.974,12.644c-0.101,0.124-0.256,0.197-0.416,0.197c-0.164,0-0.315-0.073-0.419-0.197L2.575,4.554H0.532c-0.206,0-0.392,0.115-0.479,0.299c-0.09,0.184-0.064,0.403,0.06,0.561l12.435,15.762c0.104,0.125,0.255,0.2,0.419,0.2c0.16,0,0.315-0.075,0.416-0.2L25.816,5.413c0.128-0.157,0.148-0.377,0.058-0.561C25.789,4.669,25.601,4.554,25.397,4.554z" />
+                </svg>
+            </button>
+            <div class="stDemoTitle" id="pokeTitle">X & Y OVERLAY</div>
+            <button id="pokeNext" class="pokeButt">
+                <svg class="pokeButtIcon" viewBox="0 0 25.93 25.93">
+                    <path d="M25.397,4.554h-2.042l-9.974,12.644c-0.101,0.124-0.256,0.197-0.416,0.197c-0.164,0-0.315-0.073-0.419-0.197L2.575,4.554H0.532c-0.206,0-0.392,0.115-0.479,0.299c-0.09,0.184-0.064,0.403,0.06,0.561l12.435,15.762c0.104,0.125,0.255,0.2,0.419,0.2c0.16,0,0.315-0.075,0.416-0.2L25.816,5.413c0.128-0.157,0.148-0.377,0.058-0.561C25.789,4.669,25.601,4.554,25.397,4.554z" />
+                </svg>
+            </button>
+        </div>
+
+        <div class="stDemo" id="pokeXY">
+    
+            <img src="Resources/Images/PokeST XY.jpg" class="pokeSTimg" alt="">
+
+            <div class="projectDesc">
+                An overlay for Pokemon X and Pokemon Y with designs inspired by the game's UI. Pokemon
+                can show their nicknames, species, LVLs and even their health, that will update in values
+                and colors depending on their HP.
+                <br><br>
+                The overlay also has a "Player Info" widget that displays current badges as well as
+                some stats, which transforms into a display of pokemon stats whenever the user is
+                fighting against a wild pokemon.
+                <br><br>
+                And of course, everything is responsive and animated!
+            </div>
+
+        </div>
+
+        <div class="stDemo" id="pokeBW">
+    
+            <img src="Resources/Images/PokeST BW.jpg" class="pokeSTimg" alt="">
+
+            <div class="projectDesc">
+                An overlay for Pokemon Black and White with designs inspired by the game's UI. Pokemon
+                can show their nicknames, species, and LVLs. Colors around a pokemon will change
+                depening on the pokemon's status.
+                <br><br>
+                The overlay also has a "Player Info" widget that displays current badges as well as
+                some stats, which transforms into a display of Pokemon stats whenever the user is
+                fighting against a wild pokemon.
+                <br><br>
+                And of course, everything is responsive and animated!
+            </div>
+
+        </div>
+
+        <div class="stDemo" id="pokeIntro">
+    
+            <img src="Resources/Images/PokeST Intro.gif" class="pokeSTimg" alt="">
+
+            <div class="projectDesc">
+                An overlay to be displayed before a stream starts, showing all the Pokemon the user
+                has caught up until this moment and selecting a random sprite for each.
+                <br><br>
+                The pokemon will be hiden for a short while until they are eventually revealed with
+                their species name along with their nickname. Useful to keep the audience engaged
+                while waiting for the stream to start!
+            </div>
+
+        </div>
+
+    </div>
+
     <div id="customColorsBox" class="project">
 
         <div class="projectTitle">
@@ -315,7 +407,6 @@
             RoA Skin Recolorer
         </div>
 
-        <img src="" alt="">
         <video loop muted class="vid" src="Resources/Vids/Recolor Demo.mp4" poster="Resources/Posters/Recolor Poster.jpg"></video>
 
         <div class="projectDesc">
@@ -340,7 +431,6 @@
             RoA Replay Reader
         </div>
 
-        <img src="" alt="">
         <video loop muted class="vid" src="Resources/Vids/RoA Replay Reader.mp4" poster="Resources/Posters/RoA Replay Reader.jpg"></video>
 
         <div class="projectDesc">

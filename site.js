@@ -65,6 +65,63 @@ function stChange(value) {
 
 }
 
+const pokeXY = document.getElementById("pokeXY");
+const pokeBW = document.getElementById("pokeBW");
+const pokeIntro = document.getElementById("pokeIntro");
+const pokeTitle = document.getElementById("pokeTitle");
+const pokeBoxes = [pokeXY, pokeBW, pokeIntro];
+const pokeTitles = ["X & Y OVERLAY", "BLACK & WHITE", "STREAM INTRO"];
+let pokeCurrent = 0;
+
+const pokeButts = document.getElementsByClassName("pokeButt");
+document.getElementById("pokePrev").addEventListener("click", () => {pokeChange(false)});
+document.getElementById("pokeNext").addEventListener("click", () => {pokeChange(true)});
+
+function pokeChange(value) {
+    
+    pokeButts[0].disabled = true;
+    pokeButts[1].disabled = true;
+
+    let nextPoke, transValue;
+
+    if (value) { // next
+
+        nextPoke = pokeCurrent+1 < pokeBoxes.length ? pokeCurrent+1 : 0;
+        transValue = -50;
+        
+    } else { // prev
+        
+        nextPoke = pokeCurrent-1 >= 0 ? pokeCurrent-1 : pokeBoxes.length-1;
+        transValue = 50;
+
+    }
+
+    pokeBoxes[pokeCurrent].style.transform = `translateX(${transValue}px)`;
+    pokeBoxes[pokeCurrent].style.opacity = "0";
+    pokeBoxes[nextPoke].style.transform = `translateX(${-transValue}px)`;
+
+    setTimeout(() => {
+        
+        pokeBoxes[pokeCurrent].style.display = "none";
+        pokeBoxes[nextPoke].style.display = "flex";
+
+        pokeTitle.innerHTML = pokeTitles[nextPoke]
+
+        pokeBoxes[nextPoke].offsetHeight;
+
+        pokeBoxes[nextPoke].style.transform = "translateX(0px)";
+        pokeBoxes[nextPoke].style.opacity = "1";
+
+        setTimeout(() => {
+            pokeButts[0].disabled = false;
+            pokeButts[1].disabled = false;
+            pokeCurrent = nextPoke;
+        }, 250);
+
+    }, 250);
+
+}
+
 //plays and pauses the videos to help with performance, i think
 const vids = document.querySelectorAll(".vid");
 const imageObserver = new IntersectionObserver( (entries, observer) => {
