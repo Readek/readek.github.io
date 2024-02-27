@@ -206,6 +206,7 @@ a {
 .vid {
     filter: drop-shadow(0px 0px 10px black);
     padding: 10px 0 10px 0;
+    max-width: 720px;
 }
 
 #stRepos {
@@ -284,6 +285,10 @@ a {
 
 #recolorerBox {
     background-image: linear-gradient(to right, #3d3069, #514188, #514188, #514188, #3d3069);
+}
+
+#replayReaderBox {
+    background-color: #292C35;
 }
 
 
