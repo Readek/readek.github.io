@@ -358,6 +358,9 @@ a {
     background-color: #292C35;
 }
 
+#bbsBox {
+    background-color: #2f4f6d;
+}
 #rwBox {
     background-color: #444441;
 }
@@ -459,8 +462,12 @@ a {
     }
     .projectDesc {
         max-width: 90%;
-        text-align: justify;
-        text-align-last: center;
+        text-align: left;
+    }
+    .stDemo {
+        .projectDesc {
+            text-align: center;
+        }
     }
 
     .vid, #stPreview, #pokeSTPreview, .pokeSTimg {

@@ -72,6 +72,9 @@ class ImgCar {
 
 }
 
+const bbsTitles = ["Title Screen", "Conversations", "Title Card", "Settings"];
+new ImgCar(document.getElementById("bbsBox"), bbsTitles);
+
 const roa2Titles = ["Character Select", "Tutorials", "Emotes", "Achievements"];
 new ImgCar(document.getElementById("stRepos"), roa2Titles);
 
