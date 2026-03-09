@@ -1,6 +1,6 @@
 // "Check my projects!" click event
 document.getElementById("introDesc").addEventListener("click", () => {
-    document.getElementById("stRepos").scrollIntoView();
+    document.getElementById("bbsBox").scrollIntoView();
 });
 
 class ImgCar {
